@@ -10,6 +10,7 @@ class EncryptDataServices {
     final response = await http.get(getURL);
     if (response.statusCode == 200) {
       Item item = itemFromJson(response.body);
+
       return item;
     } else {
       return null;
